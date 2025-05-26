@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\BookStore;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePostRequest;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 
 class BookStoreController extends Controller
@@ -27,9 +29,13 @@ class BookStoreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        //
+         $validated = $request->validated();
+
+          BookStore::create($validated);
+
+          return redirect()->route('index')->with('success', 'Post created!');
     }
 
     /**
