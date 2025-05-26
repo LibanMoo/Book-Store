@@ -55,7 +55,7 @@ class BookStoreController extends Controller
      */
     public function edit(BookStore $bookStore)
     {
-        return view('BookStore.edit');
+        return view('BookStore.edit', compact('BookStore'));
     }
 
     /**
