@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('book_stores', function (Blueprint $table) {
             $table->id();
+            $table->integer('isbn');
+            $table->string('name');
+            $table->string('author');
+            $table->string('description');
             $table->timestamps();
         });
     }
