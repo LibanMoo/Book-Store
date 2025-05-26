@@ -10,7 +10,7 @@ class BookStore extends Model
     protected $fillable = [
         'isbn',
         'name',
-        'authore',
+        'author',
         'description'
     ];
 }
