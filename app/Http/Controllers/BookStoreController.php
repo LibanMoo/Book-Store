@@ -13,7 +13,7 @@ class BookStoreController extends Controller
      */
     public function index()
     {
-        //
+        return view('BookStore.index');
     }
 
     /**
@@ -21,7 +21,7 @@ class BookStoreController extends Controller
      */
     public function create()
     {
-        //
+        return view('BookStore.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class BookStoreController extends Controller
      */
     public function show(BookStore $bookStore)
     {
-        //
+        return view('BookStore.show');
     }
 
     /**
@@ -45,7 +45,7 @@ class BookStoreController extends Controller
      */
     public function edit(BookStore $bookStore)
     {
-        //
+        return view('BookStore.edit');
     }
 
     /**
