@@ -15,7 +15,11 @@ class BookStoreController extends Controller
      */
     public function index()
     {
-        return view('BookStore.index');
+        $bookStore = BookStore::paginate(10);
+
+        return view('BookStore.index', [
+            'BookStore'=> $bookStore
+        ]);
     }
 
     /**
