@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check" />
      @vite('resources/css/app.css')
     <title>Document</title>
 </head>
 <body>
     
-<div class=" w-full h-screen relative overflow-x-auto shadow-md sm:rounded-lg flex justify-center items-center">
+<div class=" w-full h-screen relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col justify-center items-center">
     <table class="w-4/6 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+@if (session('success'))
+ <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+ <span class="material-symbols-outlined">
+check
+</span>
+  <div>
+  {{ session('success') }}
+  </div>
+  @endif
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">

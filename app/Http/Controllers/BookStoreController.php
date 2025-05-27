@@ -39,7 +39,7 @@ class BookStoreController extends Controller
 
           BookStore::create($validated);
 
-          return redirect()->route('index')->with('success', 'Post created!');
+          return redirect()->route('bookstore.index')->with('success', 'Post created!');
     }
 
     /**

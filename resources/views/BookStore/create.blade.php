@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container w-full h-screen flex items-center justify-center">
-<form action="{{ route('store') }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
+<form action="{{ route('bookstore.store') }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
     @csrf
     <h2 class="text-blue-500 text-xl font-medium">Register New Book</h2>
     <div class="w-full">
