@@ -9,7 +9,7 @@
 </head>
 <body>
     
-<div class=" w-full h-screen relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col justify-center items-center">
+<div class=" w-full bg-slate-300 p-10 h-screen relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col justify-center items-center">
     <table class="w-4/6 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
 @if (session('success'))
  <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">

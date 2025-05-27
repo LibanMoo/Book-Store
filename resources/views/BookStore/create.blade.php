@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   )
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <title>Document</title>
 </head>
 <body>
-    <div class="container w-full h-screen flex items-center justify-center">
+    <div class="container bg-slate-300 p-10 w-full h-screen flex items-center justify-center">
 <form action="{{ route('bookstore.store') }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
     @csrf
     <h2 class="text-blue-500 text-xl font-medium">Register New Book</h2>
