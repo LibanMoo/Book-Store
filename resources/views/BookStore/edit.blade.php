@@ -11,6 +11,7 @@
     <div class="container w-full h-screen flex items-center justify-center">
 <form action="{{ route('bookstore.update', $bookstore->id) }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
     @csrf
+    @method('PUT')
     <h2 class="text-blue-500 text-xl font-medium">Update Book</h2>
     <div class="w-full">
   <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ISBN</label>
