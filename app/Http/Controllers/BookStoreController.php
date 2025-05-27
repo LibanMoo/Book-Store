@@ -53,9 +53,9 @@ class BookStoreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(BookStore $bookStore)
+    public function edit(BookStore $bookstore)
     {
-        return view('BookStore.edit', compact('BookStore'));
+        return view('BookStore.edit', compact('bookstore'));
     }
 
     /**
