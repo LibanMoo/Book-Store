@@ -22,7 +22,7 @@ class StorePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'isbn'=> 'required|integer|max:15',
+            'isbn'=> 'required|integer',
             'name'=> 'required|string|max:255',
             'author'=> 'required|string|max:255',
             'description'=> 'required|string|max:255'
