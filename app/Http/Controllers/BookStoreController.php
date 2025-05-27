@@ -74,8 +74,9 @@ class BookStoreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BookStore $bookStore)
+    public function destroy(BookStore $bookstore)
     {
-        //
+        $bookstore->delete();
+        return redirect()->route('bookstore.index')->with('success', 'Post Deleted!');
     }
 }
