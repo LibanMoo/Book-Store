@@ -53,17 +53,22 @@ class BookStoreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(BookStore $bookstore)
+    public function edit(Request $request, BookStore $bookstore)
     {
         return view('BookStore.edit', compact('bookstore'));
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, BookStore $bookStore)
+    public function update(StorePostRequest $request, BookStore $bookstore)
     {
-        //
+        $validated = $request->validated();
+
+          $bookstore->update($validated);
+
+          return redirect()->route('bookstore.index')->with('success', 'Post Updated!');
     }
 
     /**
