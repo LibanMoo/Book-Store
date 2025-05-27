@@ -9,25 +9,25 @@
 </head>
 <body>
     <div class="container w-full h-screen flex items-center justify-center">
-<form action="{{ url('update', $category->id) }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
+<form action="{{ route('bookstore.update', $bookstore->id) }}" method="POST" class="w-3/6 flex flex-col justify-center items-center"> 
     @csrf
-    <h2 class="text-blue-500 text-xl font-medium">Register New Book</h2>
+    <h2 class="text-blue-500 text-xl font-medium">Update Book</h2>
     <div class="w-full">
   <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ISBN</label>
-  <input type="isbn" value="{{ $category->isbn }}" name="isbn" id="isbn" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ISBN">
+  <input type="isbn" value="{{ $bookstore->isbn }}" name="isbn" id="isbn" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ISBN">
   @error('isbn') {{ $message }} @enderror
   </div>
     <div class="w-full">
   <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Book Name</label>
-  <input type="text" value="{{ $category->name }}" name="name" id="name" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name">
+  <input type="text"  value="{{ $bookstore->name }}" name="name" id="name" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name">
   </div>
     <div class="w-full">
   <label for="author" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-  <input type="text" value="{{ $category->author }}" name="author" id="author" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Author">
+  <input type="text" value="{{ $bookstore->author }}" name="author" id="author" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Author">
   </div>
   <div class="w-full">
       <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-  <textarea id="description" value="{{ $category->description }}" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Description"></textarea>
+  <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Description">{{old('description', $bookstore->description) }}</textarea>
 
   </div>
   <button type="submit" class=" mt-2 text-white bg-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm w-[20%] py-2.5 text-center me-2 mb-2">Update</button>

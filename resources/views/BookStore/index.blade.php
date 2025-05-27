@@ -30,23 +30,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($BookStore as $BookStor)
+            @foreach($BookStore as $bookstore)
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ $BookStor->isbn }}
+                    {{ $bookstore->isbn }}
                 </th>
                 <td class="px-6 py-4">
-                    {{ $BookStor->name}}
+                    {{ $bookstore->name}}
                 </td>
                 <td class="px-6 py-4">
-                   {{ $BookStor->description }}
+                   {{ $bookstore->description }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ $BookStor->created_date}}
+                    {{ $bookstore->created_date}}
                 </td>
                <td class="flex items-center px-6 py-4">
-                    <a href="{{ route('update', $BookStor->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <!-- <a href="{{ route('destroy', $BookStor->id) }}" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a> -->
+                    <a href="{{ route('bookstore.edit', $bookstore->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <!-- <a href="{{ route('bookstore.destroy', $bookstore->id) }}" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a> -->
                 </td>
             </tr>
             @endforeach
