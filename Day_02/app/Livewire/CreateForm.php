@@ -33,5 +33,6 @@ class CreateForm extends Component
         $validatedData = $this->validate();
  
         BookStore::create($validatedData);
+        return redirect()->route('bookstore.index')->with('success', 'Post Deleted!');
     }
 }
