@@ -11,6 +11,7 @@ class BookStore extends Model
         'isbn',
         'name',
         'author',
-        'description'
+        'description',
+        'cover_book'
     ];
 }
