@@ -5,8 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BookStoreResource\Pages;
 use App\Filament\Resources\BookStoreResource\RelationManagers;
 use App\Models\BookStore;
+use Faker\Calculator\Isbn;
 use Filament\Forms;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
+use Filament\Forms\FormsComponent;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -23,7 +26,7 @@ class BookStoreResource extends Resource
     {
         return $form
             ->schema([
-                //
+            
             ]);
     }
 
@@ -31,7 +34,10 @@ class BookStoreResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make( name:'isbn' ),
+                Tables\Columns\TextColumn::make( name:'name' ),
+                Tables\Columns\TextColumn::make( name:'author' ),
+                Tables\Columns\TextColumn::make( name:'description' ),
             ])
             ->filters([
                 //
