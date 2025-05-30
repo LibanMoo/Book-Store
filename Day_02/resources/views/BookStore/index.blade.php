@@ -59,7 +59,7 @@ check
                     <form action="{{ route('bookstore.destroy', $bookstore->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                    <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</button>
+                    <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3 cursor-pointer">Remove</button>
                     </form>
                 </td>
             </tr>
