@@ -30,6 +30,7 @@ class CreateForm extends Component
  
     public function saveCreateForm()
     {
+        sleep(2);
         $validatedData = $this->validate();
  
         BookStore::create($validatedData);
