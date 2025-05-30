@@ -11,9 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('book_stores', function (Blueprint $table) {
-            $table->string('cover_book');
-        });
+        //
     }
 
     /**
@@ -21,8 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('book_stores', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };
