@@ -48,9 +48,8 @@ class BookStoreResource extends Resource
     FileUpload::make('cover_book')
     ->image()
     ->directory('book-covers')
-    ->imagePreviewHeight('250')
-    ->maxSize('250')
-    ->preserveFilenames(),
+    ->imagePreviewHeight('900')
+    ->maxSize('900'),
             ]);
     }
 
