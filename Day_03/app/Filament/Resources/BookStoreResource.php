@@ -8,6 +8,7 @@ use App\Models\BookStore;
 use Faker\Calculator\Isbn;
 use Filament\Forms;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\FormsComponent;
 use Filament\Resources\Resource;
@@ -26,7 +27,19 @@ class BookStoreResource extends Resource
     {
         return $form
             ->schema([
-            
+            TextInput::make('isbn')
+    ->label('ISBN')
+    ->placeholder('Enter the ISBN number'),
+            TextInput::make('name')
+    ->label('NAME')
+    ->placeholder('Enter the book name'),
+            TextInput::make('author')
+    ->label('AUTHOR')
+    ->placeholder('Enter the author name'),
+            TextArea::make('description')
+    ->label('DESCRIPTION')
+    ->placeholder('Enter the description')
+    ->rows(3),
             ]);
     }
 
