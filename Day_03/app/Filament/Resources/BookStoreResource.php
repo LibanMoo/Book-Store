@@ -16,6 +16,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Filters\Filter;;
 
 class BookStoreResource extends Resource
 {
@@ -53,7 +54,16 @@ class BookStoreResource extends Resource
                 Tables\Columns\TextColumn::make( name:'description' ),
             ])
             ->filters([
-                //
+Filter::make('author')
+    ->form([
+        TextInput::make('author')
+            ->label('AUTHOR')
+    ])
+    ->query(function ($query, array $data) {
+        return $query
+            ->when($data['author'], fn ($query, $author) => $query->where('author', 'like', "%{$author}%"));
+    }),
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
