@@ -37,5 +37,4 @@ Here’s how i displayed the image:
 
 1. Retrieved the file path from the database 
 2. Displaying an uploaded image:
-   ```bash
-  ImageColumn::make('cover_book')
+   <pre lang="markdown"> ```bash   ImageColumn::make('cover_book') ``` </pre>
