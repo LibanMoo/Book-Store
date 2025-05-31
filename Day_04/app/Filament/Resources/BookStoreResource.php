@@ -49,7 +49,7 @@ class BookStoreResource extends Resource
     ->image()
     ->directory('book-covers')
     ->disk('public')
-    ->imagePreviewHeight(900)
+    ->imagePreviewHeight(250)
     ->maxSize(900)
     ->required(),
             ]);
