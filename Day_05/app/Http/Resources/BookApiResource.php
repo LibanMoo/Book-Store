@@ -15,11 +15,9 @@ class BookApiResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id'          => $this->id,
             'title'       => $this->name,
             'author'      => $this->author,
             'description' => $this->description,
-            'created_at'  => $this->created_at->toDateTimeString(),
         ];
     }
 }
