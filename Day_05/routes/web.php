@@ -15,6 +15,5 @@ Route::get('/', function () {
 Route::resource('bookstore', BookStoreController::class);
 
 
-
 // Route::get('/{id}/edit', [BookStoreController::class, 'edit'])->name('edit');
 
