@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\BookStoreController;
 use App\Models\BookStore;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,7 @@ Route::get('/', function () {
 
 Route::resource('bookstore', BookStoreController::class);
 
+Route::get('api/books', [BookController::class, 'index']);
 
 // Route::get('/{id}/edit', [BookStoreController::class, 'edit'])->name('edit');
 
