@@ -20,9 +20,15 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Traits\HasRoles;
 
 class BookStoreResource extends Resource
 {
+     public static function canAccess(): bool
+    {
+         return Auth::check() && Auth::user() && Auth::user()->hasRole('admin');
+    }
     protected static ?string $model = BookStore::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
