@@ -14,5 +14,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
          $this->call(RolesSeeder::class);
+//         $user =  User::create([
+//     'name' => 'Liban',
+//     'email' => 'ahmed@example.com',
+//     'password' => bcrypt('ahmed'),
+// ]);
+User::where('id', '!=', 3)->each(function ($user) {
+    $user->removeRole('admin');
+});
     }
 }
