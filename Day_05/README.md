@@ -10,9 +10,9 @@ This is a challenge i am taking
 
 
 ## What was my hardest?
-Restricting the BookResource was my hardest part
+Restricting the BookResource to admin only was my hardest part
 
 ## What are you proud of?
 
-I am proud of that i can adapt in every framework or update.
-and can work of in any condition while sittin many hours debugging the code
+My ability to quickly adjust to any framework or update makes me proud.
+and can operate under any circumstance while spending many hours debugging the code.
